@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$bgColor: rgb(229 229 229);
+$importantColor: red;
+@mixin font($size, $weight) {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin closeBtn() {
+  border: none;
+  background: inherit;
+  padding-block: 0;
+  padding-inline: 0;
+  &:after {
+    content: url('../assets/close_default.svg');
+  }
+  &:hover, &:focus {
+    &:after {content: url('../assets/close_focus.svg')}
+  }
+}
+body {
+  margin: 0;
+  background-color: $bgColor;
+  @include font(12px, 300)
+}
+#app {
+  position: relative;
+}
+input {
+  margin: 0;
+  // border: 2px solid red
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+[v-cloak] {
+  display: none;
+}
+.input-text_box{
+  display: flex;
+  flex-direction: column;
+  label {
+    @include font (14px, 400);
+  }
+}
+.input-text {
+  @include font (10px, 300);
+  height: 16px;
+
+  margin-top: 4px;
+}
+.input-select {
+  @include font (10px, 300);
+  height: 22px;
+
+  margin-top: 4px;
+}
+.input-date {
+  padding-block: 1px;
+  padding-inline: 2px;
+  overflow: auto;
+}
+.radio_box {
+  padding: 5px;
+}
+.open_btn {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 4px;
+
+  background-color: #fff;
+  border: 1px solid grey;
+}
+.span-2 {
+  grid-column-start: span 2;
+}
+.important::after {
+  content: ' *';
+  color: $importantColor;
+}
+input:not(:placeholder-shown):invalid {
+  border: 2px solid #f00;
+}
+

@@ -1,0 +1,36 @@
+@import './general.scss';
+.alert_box {
+  box-sizing: border-box;
+  position: sticky;
+  bottom: 10px;
+  display: flex;
+  margin: 10px auto;
+  padding-right: 5px;
+  padding-left: 20px;
+  max-width: 300px;
+  height: 70px ;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.alert_title {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.alert_message {
+  display: inline-block;
+}
+.error {
+  border: 1px solid red;
+  border-left: 10px solid red;
+}
+.sucsess {
+  border: 1px solid green;
+  border-left: 10px solid green;
+}
+.alert_close_btn {
+  margin-left: auto;
+  margin-top: 5px;
+  align-self: flex-start;
+  @include closeBtn
+}

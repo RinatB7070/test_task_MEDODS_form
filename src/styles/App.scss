@@ -1,0 +1,54 @@
+@import './general.scss';
+
+.create_client_btn {
+  display: block;
+  margin: 10px auto;
+  padding: 4px;
+  border: 1px solid #111;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.form_box {
+  margin: 10px auto;
+  padding: 15px;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  background-color: #fff;
+}
+#app {
+  position: relative;
+}
+.form_header {
+  display: flex;
+  align-items: flex-start;
+}
+.form_header_text {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+.form_tip {
+  @include font(12px, 300);
+  margin-bottom: 20px;
+  filter: opacity(60%);;
+}
+.close_btn {
+  @include closeBtn
+}
+.form_footer {
+  display: flex;
+}
+.send_btn {
+  border: 1px solid #111;
+  border-radius: 10px;
+  background-color: inherit;
+
+  &:hover, &:focus {
+    background-color: #111;
+    color: #fff;
+  }
+}
+#sms_toggle {
+  flex-grow: 1;
+  @include font (10px, 600);
+}
